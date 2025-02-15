@@ -3,33 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
     <title>Trip in a city</title>
     <style>
+        *{
+            background-color:rgb(217, 217, 217);
+        }
         div > a{
             display:block;
             border:2px solid black;
+            border-radius: 10px;
             margin:10px;
             padding:8px;
+            color:#e6ffff;
+            text-decoration:none;
         }
         #likha, #onno{
             border:2px solid black;
-            margin:10px;
+            border-radius: 10px;
+            margin:0 auto;
+            background-color: #666699;
+            max-width: 400px;
+        }
+        #likha > a{
+            background-color: #b3b300;
+        }
+        #likha{
         }
         #onno{
-            margin-top:80px;
+            margin-top:30px;
+        }
+        #onno > a{
+            background-color: #88cc00;
+            
+        }
+        #onno>a:hover{
+            background-color: rgb(0, 255, 0);
+            color:rgb(255, 51, 119);
+            
+        }
+        #likha>a:hover{
+            background-color:hsl(60, 100%, 50%);
+            color:#333300;
+        }
+        #smy{
+            text-align:center ;
+            margin-bottom:50px;
+        }
+        hr, marquee{
+            max-width:400px;
+            margin:0 auto;
+        }
+
+        #akhon{
+            color:#ff0000;
+        }
+        #somoy{
+            color:#008066;
+        }
+        footer>p{
+            float:right;
+            margin-top:40px;
+        }
+        #ashol{
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div id="likha">
-        <a href="likha/somoy.html" target="_blank">সময়</a>
-        <a href="likha/wave.html" target="_blank">ওয়েভ</a>
-        <a href="likha/poriborton.html" target="_blank">বর্তমান যেনো অতীতের উল্টো</a>
-        <a href="likha/mritoWave.html" target="_blank">মৃত ওয়েভ</a>
+    
+    <div id="smy">
+        <h1 id="akhon">Now Time</h1>
+        <h3 id="somoy"></h3>
+        <marquee>🛻</marquee>
+        <hr>
     </div>
-    <div id="onno">
-        <a href="likha/photo.html" target="_blank">A trip in a city</a>
-        <a href="app/ticket.html" target="_blank">Ticket App</a>
+    <div id="ashol">
+        <div id="likha">
+            <a href="likha/somoy.html" target="_blank">সময়</a>
+            <a href="likha/wave.html" target="_blank">ওয়েভ</a>
+            <a href="likha/poriborton.html" target="_blank">বর্তমান যেনো অতীতের উল্টো</a>
+            <a href="likha/mritoWave.html" target="_blank">মৃত ওয়েভ</a>
+        </div>
+        <div id="onno">
+            <a href="likha/photo.html" target="_blank">A trip in a city</a>
+            <a href="app/ticket.html" target="_blank">Ticket App</a>
+        </div>
     </div>
+    <footer>
+        <p>&copy Moloy</p>
+    </footer>
+    
+    <script>
+        let somoy=document.getElementById("somoy");
+        let SOMOY=new Date();
+        let dakhao=SOMOY.getHours()+'Hour '+SOMOY.getMinutes()+"Miniute "+SOMOY.getSeconds()+"Second";
+        somoy.innerHTML=dakhao;
+    </script>
 </body>
 </html>
