@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1">
+    <meta http-equiv="refresh" content="12.11">
     <title>Trip in a city</title>
     <style>
         *{
             background-color:rgb(217, 217, 217);
         }
-        div > a{
+        #likha > a,#onno>a{
             display:block;
             border:2px solid black;
             border-radius: 10px;
@@ -61,12 +61,26 @@
         #somoy{
             color:#008066;
         }
-        footer>p{
+        footer{
+            margin-top:60px;
+        }
+        footer>div>p{
             float:right;
-            margin-top:40px;
+            display:inline;
         }
         #ashol{
             text-align: center;
+        }
+        #fdiv>a>img{
+            width:25px;
+            height:25px;
+        }
+        #fdiv>a{
+            margin:10px;
+            padding:10px;
+        }
+        #bon{
+            display:inline;
         }
     </style>
 </head>
@@ -75,7 +89,8 @@
     <div id="smy">
         <h1 id="akhon">Now Time</h1>
         <h3 id="somoy"></h3>
-        <marquee>🛻</marquee>
+        <p id="bon">🌳</p>
+        <marquee id="gari">🛻</marquee>
         <hr>
     </div>
     <div id="ashol">
@@ -91,7 +106,13 @@
         </div>
     </div>
     <footer>
-        <p>&copy Moloy</p>
+        <div id="fdiv">
+            <a href="https://moloy-ghosh.github.io/information/" target="_blank"><img src="logo/website.png"></a>
+            <a href="https://www.facebook.com/moloy.ghosh.31508076/" target="_blank"><img src="logo/fb.png"></a>
+            <a href="https://github.com/Moloy-Ghosh/" target="_blank"><img src="logo/github.png"></a>
+            <a href="tel:01780303302"><img src="logo/phone.png"></a>
+            <p>&copy Moloy</p>
+        </div>
     </footer>
     
     <script>
@@ -99,6 +120,28 @@
         let SOMOY=new Date();
         let dakhao=SOMOY.getHours()+'Hour '+SOMOY.getMinutes()+"Miniute "+SOMOY.getSeconds()+"Second";
         somoy.innerHTML=dakhao;
+        var gari=document.getElementById("gari");
+        var bon=document.getElementById("bon");
+        if(SOMOY.getHours()>18){
+            gari.innerHTML="🚐"+" "+"🚛";
+            bon.innerHTML="";
+        }
+        if(SOMOY.getHours()>15 && SOMOY.getHours()<17){
+            bon.innerHTML="🌻"
+        }
+        if(SOMOY.getMinutes()>50){
+            gari.innerHTML="🏎️";
+        }
+        if(SOMOY.getHours()==17){
+            gari.innerHTML="";
+            bon.innerHTML="🎄"
+        }
+        if(SOMOY.getMinutes()==58){
+            gari.innerHTML="🏍️";
+        }
+        if(SOMOY.getMinutes()==59){
+            gari.innerHTML="🏍️ 🏎️";
+        }
     </script>
 </body>
 </html>
