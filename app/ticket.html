@@ -3,9 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ticket</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: auto auto auto;
+            width:220px;
+            padding:auto auto;
+            border:3px solid black;
+            border-radius: 6px;
+            margin:30px;
+        }
+        #mid-container1, #mid-container2{
+            display:grid;
+            grid-template-columns: auto auto;
+        }
+        #semi-container1,#semi-container2,#semi-container3,#semi-container4{
+            margin:auto auto;
+        }
+        #semi-container1>div,#semi-container2>div,#semi-container3>div,#semi-container4>div,#semi-container5>div{
+            width:30px;
+            height:30px;
+            background-color: aqua;
+            border:2px solid rgb(22, 49, 77);
+            border-radius: 6px;
+            margin:3px;
+            text-align: center;
+        }
+        #semi-container5>div{
+            margin-top:450px;
+        }
+        #semi-container1>div:hover,#semi-container2>div:hover,#semi-container3>div:hover,#semi-container4>div:hover,#semi-container5>div:hover{
+            background-color:rgb(162, 50, 50);
+            cursor: pointer;
+        }
+        #flex-div1{
+            border:2px solid black;
+            padding:5px;
+            display:inline-block;
+        }
+        label, form>button{
+            margin:10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h2>বাসের আসন বুক করুন</h2>
+    <div>
+        <select>
+            <option disabled>পরিবহন</option>
+            <option value="so">সোহাগ</option>
+            <option value="su">সৌদিয়া</option>
+            <option value="sam">শ্যামলী</option>
+            <option value="eg">ঈগল</option>
+            <option value="ha">হানিফ</option>
+            <option value="en">এনা</option>
+            <option value="we">ওয়েলকাম এক্সপ্রেস</option>
+            <option value="tu">টুঙ্গিপাড়া এক্সপ্রেস</option>
+            <option value="brtc">বি আর টি সি</option>
+            <option value="gl">গ্রীন লাইন</option>
+            <option value="saku">সাকুরা</option>
+            <option value="emad">ইমাদ</option>
+            <option value="desh">দেশ ট্রাভেলস</option>
+            <option value="nash">ন্যাশনাল পরিবহন</option>
+            <option value="mar">মার্সা ট্রাভেলস</option>
+            <option value="golde">গোল্ডেন লাইন</option>
+            <option value="saven">সেভেন স্টার</option>
+        </select>
+        <div id="container">
+            <div id="mid-container1">
+                <div id="semi-container1">
+                    <div>A1</div>
+                    <div>B1</div>
+                    <div>C1</div>
+                    <div>D1</div>
+                    <div>E1</div>
+                    <div>F1</div>
+                    <div>G1</div>
+                    <div>H1</div>
+                    <div>I1</div>
+                    <div>J1</div>
+                    <div>K1</div>
+                    <div>L1</div>
+                    <div>M1</div>
+                </div>
+                <div id="semi-container2">
+                    <div>A2</div>
+                    <div>B2</div>
+                    <div>C2</div>
+                    <div>D2</div>
+                    <div>E2</div>
+                    <div>F2</div>
+                    <div>G2</div>
+                    <div>H2</div>
+                    <div>I2</div>
+                    <div>J2</div>
+                    <div>K2</div>
+                    <div>L2</div>
+                    <div>M2</div>
+                </div>
+            </div>
+            <div div id="mid-container3">
+                <div id="semi-container5">
+                    <div>M3</div>
+                </div>
+            </div>
+            <div id="mid-container2">
+                <div id="semi-container3">
+                    <div>A3</div>
+                    <div>B3</div>
+                    <div>C3</div>
+                    <div>D3</div>
+                    <div>E3</div>
+                    <div>F3</div>
+                    <div>G3</div>
+                    <div>H3</div>
+                    <div>I3</div>
+                    <div>J3</div>
+                    <div>K3</div>
+                    <div>L3</div>
+                    <div>M4</div>
+                </div>
+                <div id="semi-container4">
+                    <div>A4</div>
+                    <div>B4</div>
+                    <div>C4</div>
+                    <div>D4</div>
+                    <div>E4</div>
+                    <div>F4</div>
+                    <div>G4</div>
+                    <div>H4</div>
+                    <div>I4</div>
+                    <div>J4</div>
+                    <div>K4</div>
+                    <div>L4</div>
+                    <div>M5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="flex-container">
+        <div id="flex-div1">
+            <h3>যাত্রী</h3>
+            <form>
+                <label>যাত্রীর নাম:<input type="text"></label> <br>
+                <label>যাত্রীর মোবাইল:<input type="tel"></label> <br>
+                <button type="submit" onclick="katun()">কাটুন</button>
+            </form>
+        </div>
+        
+        <div id="flex-div2">
+            apner ticket aikhane dakhabe 'katun' click ar por!
+        </div>
+    </div>
+    <footer>
+        <p>This page is under construction</p>
+        <p>&copy Moloy</p>
+    </footer>
+    <script>
+        function katun(){
+            alert("পেইজটি এখনও পুরোপুরি তৈরি হয় নি!");
+        }
+    </script>
 </body>
 </html>
