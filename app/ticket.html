@@ -10,8 +10,11 @@
             grid-template-columns: auto auto auto;
             width:220px;
             padding:auto auto;
-            border:3px solid black;
             border-radius: 6px;
+        }
+        #tTicket{
+            border:3px solid black;
+            width:220px;
             margin:30px;
         }
         #mid-container1, #mid-container2{
@@ -31,7 +34,7 @@
             text-align: center;
         }
         #semi-container5>div{
-            margin-top:450px;
+            margin-top:375px;
         }
         #semi-container1>div:hover,#semi-container2>div:hover,#semi-container3>div:hover,#semi-container4>div:hover,#semi-container5>div:hover{
             background-color:rgb(162, 50, 50);
@@ -50,7 +53,7 @@
 <body>
     <h2>বাসের আসন বুক করুন</h2>
     <div>
-        <select>
+        <select id="pNam">
             <option disabled>পরিবহন</option>
             <option value="so">সোহাগ</option>
             <option value="su">সৌদিয়া</option>
@@ -70,78 +73,81 @@
             <option value="golde">গোল্ডেন লাইন</option>
             <option value="saven">সেভেন স্টার</option>
         </select>
-        <div id="container">
-            <div id="mid-container1">
-                <div id="semi-container1">
-                    <div>A1</div>
-                    <div>B1</div>
-                    <div>C1</div>
-                    <div>D1</div>
-                    <div>E1</div>
-                    <div>F1</div>
-                    <div>G1</div>
-                    <div>H1</div>
-                    <div>I1</div>
-                    <div>J1</div>
-                    <div>K1</div>
-                    <div>L1</div>
-                    <div>M1</div>
+
+
+
+        <div id="tTicket">
+            <p id="tumarpNam"></p>
+        
+            <div id="container">
+                <div id="mid-container1">
+                    <div id="semi-container1">
+                        <div>A1</div>
+                        <div>B1</div>
+                        <div>C1</div>
+                        <div>D1</div>
+                        <div>E1</div>
+                        <div>F1</div>
+                        <div>G1</div>
+                        <div>H1</div>
+                        <div>I1</div>
+                        <div>J1</div>
+                        <div>K1</div>
+                    </div>
+                    <div id="semi-container2">
+                        <div>A2</div>
+                        <div>B2</div>
+                        <div>C2</div>
+                        <div>D2</div>
+                        <div>E2</div>
+                        <div>F2</div>
+                        <div>G2</div>
+                        <div>H2</div>
+                        <div>I2</div>
+                        <div>J2</div>
+                        <div>K2</div>
+                    </div>
                 </div>
-                <div id="semi-container2">
-                    <div>A2</div>
-                    <div>B2</div>
-                    <div>C2</div>
-                    <div>D2</div>
-                    <div>E2</div>
-                    <div>F2</div>
-                    <div>G2</div>
-                    <div>H2</div>
-                    <div>I2</div>
-                    <div>J2</div>
-                    <div>K2</div>
-                    <div>L2</div>
-                    <div>M2</div>
+                <div div id="mid-container3">
+                    <div id="semi-container5">
+                        <div>K3</div>
+                    </div>
                 </div>
-            </div>
-            <div div id="mid-container3">
-                <div id="semi-container5">
-                    <div>M3</div>
-                </div>
-            </div>
-            <div id="mid-container2">
-                <div id="semi-container3">
-                    <div>A3</div>
-                    <div>B3</div>
-                    <div>C3</div>
-                    <div>D3</div>
-                    <div>E3</div>
-                    <div>F3</div>
-                    <div>G3</div>
-                    <div>H3</div>
-                    <div>I3</div>
-                    <div>J3</div>
-                    <div>K3</div>
-                    <div>L3</div>
-                    <div>M4</div>
-                </div>
-                <div id="semi-container4">
-                    <div>A4</div>
-                    <div>B4</div>
-                    <div>C4</div>
-                    <div>D4</div>
-                    <div>E4</div>
-                    <div>F4</div>
-                    <div>G4</div>
-                    <div>H4</div>
-                    <div>I4</div>
-                    <div>J4</div>
-                    <div>K4</div>
-                    <div>L4</div>
-                    <div>M5</div>
+                <div id="mid-container2">
+                    <div id="semi-container3">
+                        <div>A3</div>
+                        <div>B3</div>
+                        <div>C3</div>
+                        <div>D3</div>
+                        <div>E3</div>
+                        <div>F3</div>
+                        <div>G3</div>
+                        <div>H3</div>
+                        <div>I3</div>
+                        <div>J3</div>
+                        <div>K4</div>
+                    </div>
+                    <div id="semi-container4">
+                        <div>A4</div>
+                        <div>B4</div>
+                        <div>C4</div>
+                        <div>D4</div>
+                        <div>E4</div>
+                        <div>F4</div>
+                        <div>G4</div>
+                        <div>H4</div>
+                        <div>I4</div>
+                        <div>J4</div>
+                        <div>K5</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
     <div id="flex-container">
         <div id="flex-div1">
             <h3>যাত্রী</h3>
@@ -164,6 +170,16 @@
         function katun(){
             alert("পেইজটি এখনও পুরোপুরি তৈরি হয় নি!");
         }
+
+        var pNam=document.getElementById('pNam');
+        var tumarPNam=document.getElementById('tumarpNam')
+
+        pNam.onchange = function(e){
+            //tumarPNam.innerHTML=this.selected.innerHTML;
+            alert(pNam.selected.innerHTML);
+            e.preventDefault();
+        };
+        
     </script>
 </body>
 </html>

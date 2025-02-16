@@ -17,6 +17,7 @@
             padding:8px;
             color:#e6ffff;
             text-decoration:none;
+            font-weight: bold;
         }
         #likha, #onno{
             border:2px solid black;
@@ -26,7 +27,7 @@
             max-width: 400px;
         }
         #likha > a{
-            background-color: #b3b300;
+            background-color: #00ff00;
         }
         #onno{
             margin-top:30px;
@@ -43,6 +44,7 @@
         #likha>a:hover{
             background-color:hsl(60, 100%, 50%);
             color:#333300;
+            .pencil{background-color:hsl(60, 100%, 50%);}
         }
         #smy{
             text-align:center ;
@@ -54,7 +56,7 @@
         }
 
         #akhon{
-            color:#ff0000;
+            color:rgb(255, 51, 153);
         }
         #somoy{
             color:#008066;
@@ -79,10 +81,36 @@
         #bon{
             display:inline;
         }
+        #bijli{
+            width:3px;
+            height:3px;
+        }
+        .pencil{
+            background-color: #00ff00;
+            width:20px;
+            height: 20px;
+            margin:0 0;
+        }
+        picture{
+            margin:0 0;
+        }
+        #valobasha{
+            text-align: center;
+        }
+        #valobasha>a>picture{
+            border-bottom:2px solid white;
+        }
     </style>
 </head>
 <body>
-    
+    <div id="valobasha">
+        <a href="Golap.jpg" title="আপনাদের জন্য ভালোবাসা" target="_blank">
+            <picture>
+                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f496/512.webp" type="image/webp">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f496/512.gif" alt="💖" width="32" height="32">
+            </picture>
+        </a>
+    </div>
     <div id="smy">
         <h1 id="akhon">Now Time</h1>
         <h3 id="somoy"></h3>
@@ -96,6 +124,12 @@
             <a href="likha/wave.html" target="_blank">ওয়েভ</a>
             <a href="likha/poriborton.html" target="_blank">বর্তমান যেনো অতীতের উল্টো</a>
             <a href="likha/mritoWave.html" target="_blank">মৃত ওয়েভ</a>
+            <a href="likha/city.html" target="_blank">
+                <picture>
+                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/270f_fe0f/512.webp" type="image/webp">
+                    <img class="pencil" src="https://fonts.gstatic.com/s/e/notoemoji/latest/270f_fe0f/512.gif" alt="✏" width="32" height="32">
+                </picture>
+                 &nbsp; &nbsp; শহর, অঞ্চল ও মানুষ</a>
         </div>
         <div id="onno">
             <a href="likha/photo.html" target="_blank">A trip in a city</a>
